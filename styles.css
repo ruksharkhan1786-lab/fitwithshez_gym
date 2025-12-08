@@ -591,6 +591,8 @@ img {
 .services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    background: url("img gym/gym-website-background-images.jpg") no-repeat center center;
+    background-size: cover;
   gap: 30px;
   padding: 50px 40px;
 }
