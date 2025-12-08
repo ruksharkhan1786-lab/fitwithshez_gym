@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — FitWithShez</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+   <div class="brand">
+     <img src="img gym/ChatGPT Image Nov 27, 2025, 04_55_00 PM.png" alt="logo" class="logo" style="width: 150px; height: 100px">
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="Online Coaching.html">Online Coaching</a>
+        <a href="OurServices.html">Our Services</a>
+        <a href="Transformations.html">Transformations</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="active login-btn">Login</a>
+    </nav>
+</header>
+
+
+<!-- LOGIN FORM -->
+<section class="login-section">
+    <div class="login-box">
+        <h2>Welcome Back</h2>
+        <p>Login to your FitWithShez account</p>
+
+        <form action="#" class="login-form">
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+
+            <button type="submit" class="login-submit">Login</button>
+
+            <p class="signup-text">
+                Don’t have an account? <a href="#">Sign up</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-top">
+        
+        <!-- Logo + Text -->
+        <div class="footer-about">
+            <div class="brand">
+      <!-- inline SVG animated-ish logo (glow) -->
+    
+   <div class="brand">
+       <img src="img gym/ChatGPT Image Nov 27, 2025, 04_44_02 PM.png" alt="logo" class="logo" style="width: 150px; height: 100px"
+      <div class="title"></div>
+      
+    </div>
+            <p class="about-text">
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+            </p>
+
+            <div class="app-buttons">
+                <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/appDownload/googlePlayBtnBlack.svg"
+                     alt="google play" class="app-btn" />
+                <img src="https://raw.githubusercontent.com/prebuiltui/prebuiltui/refs/heads/main/assets/appDownload/appleStoreBtnBlack.svg"
+                     alt="app store" class="app-btn" />
+            </div>
+        </div>
+
+        <!-- Company Links + Contact -->
+        <div class="footer-links">
+            <div>
+                <h2 class="footer-title">Company</h2>
+                <ul class="footer-list">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Contact us</a></li>
+                    <li><a href="#">Privacy policy</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h2 class="footer-title">Get in touch</h2>
+                <div class="footer-list">
+                    <p>+91 8800680336</p>
+                    <p>shejaad11@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <p class="footer-bottom">
+        Copyright © 2025 <a href="#">FitWithShez</a>. All Rights Reserved.
+    </p>
+</footer>
+
+
+<!-- MOBILE MENU SCRIPT -->
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
