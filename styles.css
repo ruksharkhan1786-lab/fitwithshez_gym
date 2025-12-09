@@ -24,10 +24,7 @@ body {
   padding:72px 0;
   text-align:center;
   background: linear-gradient(180deg, rgba(2,8,12,0.0), rgba(0,0,0,0.02));
-  border-radius:16px;
-    
-    border-radius: 16px;
-    padding: 90px 0;
+  border-radius:16px;   
     color: #fff;  
 }
 .hero h1{font-size:2.6rem;color:var(--green);margin-bottom:10px}
@@ -60,8 +57,9 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
   padding: 22px 40px;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #111010;
 }
 
 .navbar nav a {
@@ -184,7 +182,7 @@ img {
 }
 
 .price-card {
-  background: white;
+  background: rgb(245, 235, 235);
   border-radius: 14px;
   padding: 25px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
@@ -388,6 +386,7 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 15px 40px;
+  font-weight: bold;
   background: #ffffff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
@@ -838,6 +837,7 @@ img {
     justify-content: space-between;
     align-items: center;
     padding: 15px 25px;
+    font-weight: bold;
     background: #fff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
@@ -863,6 +863,7 @@ img {
         text-align: center;
         gap: 10px;
         padding: 10px 0;
+        
     }
 
     .navbar nav {
@@ -880,10 +881,10 @@ img {
    HERO SECTION
 ============================ */
 .hero {
-    padding: 90px 20px;
+   padding: 200px;
     text-align: center;
     color: #fff;
-    background: url("/img gym/bg3.jpg") no-repeat center center;
+    background: url("/img gym/shez\ 5.jpeg") no-repeat center center;
     background-size: cover;
     border-radius: 16px;
 }
@@ -1023,6 +1024,7 @@ img {
     align-items: center;
     padding: 15px 25px;
     background: #fff;
+    font-weight: bold;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
     top: 0;
