@@ -468,6 +468,21 @@ img {
   color: white !important;
   border-radius: 6px;
 }
+.instagram-row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap; /* responsive */
+}
+
+.instagram-row blockquote {
+  max-width: 360px !important;
+  width: 100% !important;
+  background: #dfa5a5;
+  border-radius: 12px;
+}
+
 /* CONTACT HEADER */
 .contact-header {
   text-align: center;

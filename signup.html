@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up — FitWithShez</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="brand">
+        <a href="index.html">
+            <img src="img gym/ChatGPT Image Nov 27, 2025, 04_55_00 PM.png"
+                 alt="logo"
+                 class="logo"
+                 style="width:150px;height:100px;">
+        </a>
+    </div>
+
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+    <nav id="mobileMenu">
+        <a href="index.html">Home</a>
+        <a href="Online Coaching.html">Online Coaching</a>
+        <a href="OurServices.html">Our Services</a>
+        <a href="Transformations.html">Transformations</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html" class="login-btn">Login</a>
+    </nav>
+</header>
+
+<!-- SIGN UP FORM -->
+<section class="login-section">
+    <div class="login-box">
+        <h2>Create Account</h2>
+        <p>Join FitWithShez today</p>
+
+        <form class="login-form" onsubmit="signupUser(event)">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email Address" required>
+            <input type="password" placeholder="Password" required>
+            <input type="password" placeholder="Confirm Password" required>
+
+            <button type="submit" class="login-submit">Sign Up</button>
+
+            <p class="signup-text">
+                Already have an account? <a href="login.html">Login</a>
+            </p>
+        </form>
+    </div>
+</section>
+
+<!-- SCRIPT -->
+<script>
+function signupUser(event) {
+    event.preventDefault();
+
+    alert("Signup successful! Redirecting to login page...");
+
+    // Redirect to login page
+    window.location.href = "login.html";
+}
+
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>

@@ -32,7 +32,7 @@
     <a href="Transformations.html">Transformations</a>
     <a href="reviews.html">Reviews</a>
     <a href="contact.html" class="active">Contact</a>
-    <a href="login.html" class="login-btn">Login</a>
+    <a href="signup.html" class="login-btn">SignUp/Login</a>
 
     </nav>
 </header>
@@ -406,9 +406,29 @@
         Copyright © 2025 <a href="#">FitWithShez</a>. All Rights Reserved.
     </p>
 </footer>
+
+
+
 <script>
+const nav = document.getElementById("mobileMenu");
+
+if (localStorage.getItem("loggedIn") === "true") {
+  nav.innerHTML += `
+    <a href="dashboard.html">Dashboard</a>
+    <a href="#" onclick="logoutUser()">Logout</a>
+  `;
+}
+
+function logoutUser() {
+  localStorage.removeItem("loggedIn");
+  window.location.reload();
+}
 function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
+}
+
+function toggleDark() {
+  document.body.classList.toggle("dark");
 }
 </script>
 
