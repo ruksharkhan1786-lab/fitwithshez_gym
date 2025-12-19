@@ -483,6 +483,113 @@ img {
   border-radius: 12px;
 }
 
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* HEADINGS */
+h1, h2 {
+  text-align: center;
+}
+
+/* RATING SUMMARY */
+.rating-summary {
+  text-align: center;
+  margin: 20px 0;
+}
+.big-stars {
+  font-size: 28px;
+  color: gold;
+}
+#avgRating {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+/* REVIEW FORM */
+.review-form {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-bottom: 30px;
+}
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+}
+.review-form button {
+  background: #1e90ff;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  width: 100%;
+  font-size: 16px;
+  cursor: pointer;
+}
+.review-form button:hover {
+  background: #0b66c3;
+}
+
+/* STAR INPUT */
+.star-input span {
+  font-size: 26px;
+  cursor: pointer;
+  color: #ccc;
+}
+.star-input span.active {
+  color: gold;
+}
+
+.note {
+  font-size: 12px;
+  text-align: center;
+  color: #777;
+}
+
+/* SLIDER */
+.review-slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 15px;
+  padding: 10px;
+}
+.review-card {
+  background: #fff;
+  min-width: 250px;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.review-card .stars {
+  color: gold;
+}
+
+/* ADMIN */
+.admin-title {
+  margin-top: 40px;
+}
+.admin-review {
+  background: #fff;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+.admin-review button {
+  margin-right: 5px;
+}
+
 /* CONTACT HEADER */
 .contact-header {
   text-align: center;
@@ -896,30 +1003,127 @@ img {
    HERO SECTION
 ============================ */
 .hero {
-   padding: 200px;
-    text-align: center;
+    padding: 140px 32px;
     color: #fff;
-    background: url("/img gym/shez\ 5.jpeg") no-repeat center center;
-    background-size: cover;
+    background: url("/img gym/IMG_8408.JPG") center / cover fixed;
     border-radius: 16px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Dark overlay */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+/* Ensure content above overlay */
+.hero-content,
+.hero .grid,
+.hero .card {
+    position: relative;
+    z-index: 2;
+}
+
+/* ===============================
+   HERO TEXT
+================================ */
+.hero-content {
+    max-width: 900px;
+    margin-bottom: 60px;
+    text-align: left;
 }
 
 .hero h1 {
-    font-size: 2.4rem;
+    font-size: 3rem;
+    font-weight: 700;
     color: var(--green);
+    margin-bottom: 16px;
 }
 
 .hero p {
-    max-width: 700px;
-    margin: 10px auto;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    max-width: 680px;
+    margin-bottom: 32px;
 }
 
-/* Mobile Hero */
-@media (max-width: 600px) {
-    .hero h1 { font-size: 1.8rem; }
-    .hero p { font-size: 0.9rem; }
+/* ===============================
+   HERO BUTTON
+================================ */
+.hero-actions {
+    display: flex;
+    justify-content: center;
+
 }
+
+.hero .btn-primary {
+    padding: 14px 32px;
+    font-size: 1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    color: #000;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.hero .btn-primary:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.6);
+}
+
+/* ===============================
+   HERO CARDS
+================================ */
+.hero .grid {
+    margin-top: 60px;
+}
+
+.hero .card {
+    background: rgba(180, 218, 240, 0.95);
+    color: #111;
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    backdrop-filter: blur(6px);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.35);
+}
+
+/* ===============================
+   MOBILE OPTIMIZATION
+================================ */
+@media (max-width: 768px) {
+    .hero {
+        padding: 90px 20px;
+        background-attachment: scroll;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.95rem;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+}
+
 
 /* ============================
    GRID UNIVERSAL
